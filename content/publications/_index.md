@@ -13,9 +13,14 @@ This paper presents the X-ray spectral analysis of 43 AGN from the 12-Micron Gal
 
 ---
 
-## Co-Author
+## Co-Authored
 
 **Beyond the Dot: an LRD-like nucleus at the Heart of an IR-Bright Galaxy and its implications for high-redshift LRDs**
 *P. Rinaldi, G.H. Rieke, Z. Wu, **C.J.E. Gilbert** et al.*
 Submitted to ApJ, in review.
 [arXiv:2507.17738](https://arxiv.org/abs/2507.17738)
+
+**Filling the Gap in Cluster Evolution: JWST's Glimpse into a Young, Star-Forming Cluster at Cosmic Noon**
+*P. Rinaldi, S. Alberts, C.N.A. Willmer, C. Carreira, C.C. Williams, G. Noirot, **C.J.E. Gilbert** et al.*
+Submitted to ApJ, in review.
+[arXiv:2602.2416v1](https://arxiv.org/abs/2602.24162v1)
