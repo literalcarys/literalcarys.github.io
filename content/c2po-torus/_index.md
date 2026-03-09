@@ -9,7 +9,7 @@ layout: "simple"
 
 **C2PO-Torus** is a physically-based X-ray spectral model for AGN, designed to be a direct counterpart to the [SKIRTOR](https://academic.oup.com/mnras/article/420/4/2756/977770) infrared AGN torus model. It was generated using the [SKIRT](https://skirt.ugent.be) radiative transfer code and is intended for use with [XSPEC](https://heasarc.gsfc.nasa.gov/xanadu/xspec/).
 
-The model is presented in [Gilbert et al. (2026)](/Gilbert_xray2026.pdf), where it is applied to the X-ray spectral analysis of 43 AGN from the 12-Micron Galaxy Sample.
+The model is presented in [Gilbert et al. (2026, In prep)](/Gilbert_xray2026.pdf), where it is applied to the X-ray spectral analysis of 43 AGN from the 12-Micron Galaxy Sample.
 
 ---
 
