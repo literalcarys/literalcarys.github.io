@@ -1,0 +1,21 @@
+disabled = false
+languageCode = "en"
+languageName = "English"
+weight = 1
+title = "Carys J. E. Gilbert"
+
+[params]
+displayName = "EN"
+isoCode = "en"
+rtl = false
+dateFormat = "2 January 2006"
+
+["params.author"]
+name = "Carys J. E. Gilbert"
+image = "img/CarysGilbert.jpeg"
+headline = "M.Sc. Astronomy | University of Cape Town | X-ray Astronomy & AGN"
+links = [
+    { email = "mailto:carysgilbert93@gmail.com" },
+    { github = "https://github.com/literalcarys" },
+    { google-scholar = "https://scholar.google.com/citations?user=D8HKsp4AAAAJ&hl=en" },
+  ]

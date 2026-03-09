@@ -1,0 +1,19 @@
+[[main]]
+  name = "Publications"
+  pageRef = "publications"
+  weight = 10
+
+[[main]]
+  name = "C2PO-Torus"
+  pageRef = "c2po-torus"
+  weight = 20
+
+[[main]]
+  name = "CV"
+  url = "/CarysGilbert_CV.pdf"
+  weight = 30
+  [main.params]
+    external = true
+
+[[footer]]
+none = "none"

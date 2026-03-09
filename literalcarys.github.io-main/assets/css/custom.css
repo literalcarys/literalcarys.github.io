@@ -1,0 +1,13 @@
+body {
+  background-image: linear-gradient(rgba(var(--color-neutral-800), 0.85), rgba(var(--color-neutral-800), 0.85)), url('/img/background.jpg');
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
+  background-repeat: no-repeat;
+}
+
+.main-menu {
+  border-bottom: 3px solid rgba(var(--color-primary-500), 0.8);
+  padding-bottom: 0.5rem;
+  margin-bottom: 1.5rem;
+}
