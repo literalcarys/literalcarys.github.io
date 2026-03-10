@@ -121,7 +121,6 @@ If you use C2PO-Torus in your work, please cite:
 > **A New Hope for AGN SED Fitting: X-Ray Spectral Analysis of 12MGS AGN with the C2PO-Torus Model**
 > C.J.E. Gilbert, L. Marchetti, L. Barchiesi, and M. Vaccari (2026)
 > *MNRAS*, submitted.
-> [Preprint PDF](/Gilbert_xray2026.pdf)
 
 ---
 
