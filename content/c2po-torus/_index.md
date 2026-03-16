@@ -11,6 +11,13 @@ layout: "simple"
 
 The model is presented in Gilbert et al. (2026, In prep), where it is applied to the X-ray spectral analysis of 43 AGN from the 12-Micron Galaxy Sample.
 
+<figure style="margin: 1.5rem auto; text-align: center; display: flex; flex-direction: column; align-items: center;">
+  <div style="overflow: hidden; max-width: 60%; display: inline-block;">
+    <img src="img/torus_rotation_final.gif" alt="Rotating view of the C2PO-Torus model" style="width: 100%; margin-top: -10%; margin-bottom: -10%;" />
+  </div>
+  <figcaption style="margin-top: 0.5rem; font-size: 0.9em; opacity: 0.8;">A rotating view of the clumpy two-phase torus geometry.</figcaption>
+</figure>
+
 ---
 
 ## Model Description
