@@ -44,7 +44,7 @@ The model consists of two additive XSPEC table model components that must be **l
 | Component | Description |
 |---|---|
 | `C2POTorusD` | Directly absorbed intrinsic power law emission |
-| `C2POTorusR` | Reprocessed emission (scattered, reflected, emission lines) |
+| `C2POTorusR` | Reprocessed emission (scattered and reflected emission, emission lines) |
 
 ### Free Parameters
 
@@ -59,7 +59,7 @@ The model consists of two additive XSPEC table model components that must be **l
 
 The inclination convention is \(i = 0°\) for face-on (Seyfert 1) and \(i = 90°\) for edge-on (Seyfert 2). The equatorial column density represents the average value of the smooth model before clump generation. The average line-of-sight column density can be estimated as:
 
-\[N_{\mathrm{H,los}} = N_{\mathrm{H,eq}} \times e^{-|\cos\theta|}\]
+\[N_{\mathrm{H,los}} = N_{\mathrm{H,eq}} \times e^{-|\cos i|}\]
 
 ### Fixed Geometry Parameters
 
@@ -126,11 +126,11 @@ The model files for use in XSPEC will be made available here upon publication of
 If you use C2PO-Torus in your work, please cite:
 
 > **A New Hope for AGN SED Fitting: X-Ray Spectral Analysis of 12MGS AGN with the C2PO-Torus Model**
-> C.J.E. Gilbert, L. Marchetti, L. Barchiesi, and M. Vaccari (2026)
-> *MNRAS*, submitted.
+> C.J.E. Gilbert et al. (2026)
+> *MNRAS*, in prep.
 
 ---
 
 ## Contact
 
-For questions about the model or to request early access to the model files, please contact [Carys Gilbert](mailto:glbcar006@myuct.ac.za).
+For questions about the model or to request early access to the model files, please contact [Carys Gilbert](mailto:carysjegilbert@gmail.com).
