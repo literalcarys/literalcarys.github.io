@@ -15,7 +15,7 @@ name = "Carys J. E. Gilbert"
 image = "img/CarysGilbert.jpeg"
 headline = "M.Sc. Astronomy | University of Cape Town | X-ray Astronomy & AGN"
 links = [
-    { email = "mailto:carysgilbert93@gmail.com" },
+    { email = "mailto:carysjegilbert@gmail.com" },
     { github = "https://github.com/literalcarys" },
     { google-scholar = "https://scholar.google.com/citations?user=D8HKsp4AAAAJ&hl=en" },
   ]
