@@ -9,7 +9,7 @@ layout: "simple"
 
 **C2PO-Torus** is a physically-based X-ray spectral model for AGN, designed to be a direct counterpart to the [SKIRTOR](https://academic.oup.com/mnras/article/420/4/2756/977770) infrared AGN torus model. It was generated using the [SKIRT](https://skirt.ugent.be) radiative transfer code and is intended for use with [XSPEC](https://heasarc.gsfc.nasa.gov/xanadu/xspec/).
 
-The model is presented in Gilbert et al. (2026, In prep), where it is applied to the X-ray spectral analysis of 43 AGN from the 12-Micron Galaxy Sample.
+The model is presented in Gilbert et al. (2026, Under review at MNRAS), where it is applied to the X-ray spectral analysis of 43 AGN from the 12-Micron Galaxy Sample.
 
 <figure style="margin: 1.5rem auto; text-align: center; display: flex; flex-direction: column; align-items: center;">
   <div style="overflow: hidden; max-width: 60%; display: inline-block;">
@@ -52,14 +52,14 @@ The model consists of two additive XSPEC table model components that must be **l
 |---|---|---|---|
 | Half-opening angle | \(\Theta\) | 10 -- 80 | degrees |
 | Inclination | \(i\) | 0 -- 90 | degrees |
-| Equatorial column density | \(N_{\mathrm{H,eq}}\) | \(10^{21}\) -- \(5 \times 10^{25}\) | \(\mathrm{cm}^{-2}\) |
+| Equatorial column density | \(\mathrm{N_{H, eq}}\) | \(10^{21}\) -- \(5 \times 10^{25}\) | \(\mathrm{cm}^{-2}\) |
 | Photon index | \(\Gamma\) | 1.4 -- 2.6 | |
 | Radial dust gradient | \(p\) | 0, 1 | |
-| Reprocessed scaling | \(A_R\) | free | |
+| Reprocessed scaling | \(\mathrm{A_R}\) | free | |
 
 The inclination convention is \(i = 0°\) for face-on (Seyfert 1) and \(i = 90°\) for edge-on (Seyfert 2). The equatorial column density represents the average value of the smooth model before clump generation. The average line-of-sight column density can be estimated as:
 
-\[N_{\mathrm{H,los}} = N_{\mathrm{H,eq}} \times e^{-|\cos i|}\]
+\[\mathrm{N_{H,los}} = \mathrm{N_{H,eq}} \times e^{-|\cos i|}\]
 
 ### Fixed Geometry Parameters
 
@@ -83,7 +83,7 @@ The inclination convention is \(i = 0°\) for face-on (Seyfert 1) and \(i = 90°
 const * phabs * (A_R * C2POTorusR + C2POTorusD)
 ```
 
-Where `phabs` models Galactic absorption and all parameters of `C2POTorusD` and `C2POTorusR` should be **linked**. The scaling constant \(A_R\) can be fixed at 1 or left free.
+Where `phabs` models Galactic absorption and all parameters of `C2POTorusD` and `C2POTorusR` should be **linked**. The scaling constant \(\mathrm{A_R}\) can be fixed at 1 or left free.
 
 Additional components (e.g. `mekal` for soft excess) can be added as needed, as shown in this example fit to NGC 7469:
 
@@ -98,7 +98,7 @@ const * phabs * (mekal + A_R * C2POTorusR + C2POTorusD)
 To calculate the intrinsic \(2-10\) keV luminosity:
 1. Freeze all parameters at their final fitted values
 2. Delete all model components except `C2POTorusD`
-3. Set \(N_{\mathrm{H,eq}} = 0.1\) (lowest value, negligible obscuration)
+3. Set \(\mathrm{N_{H,eq}} = 0.1\) (lowest value, negligible obscuration)
 4. Use the `lum` command
 
 Uncertainties on the intrinsic luminosity are found using the relative uncertainties of the normalisation.
@@ -106,8 +106,7 @@ Uncertainties on the intrinsic luminosity are found using the relative uncertain
 ### Tips
 
 - For sources with **strong relativistic reflection**, consider adding `relxill` alongside C2PO-Torus, linking physical parameters where possible
-- The model performs best for **Compton-thin to moderately Compton-thick** sources
-- For very Compton-thick sources (\(N_H > 10^{25}\ \mathrm{cm}^{-2}\)), the model may overestimate the intrinsic luminosity -- a future update will improve coverage at high column densities
+- For spectra with low SNR, start by freezing \(\Theta = 60^{\circ}\), \(i = 30^{\circ}\), and \(\mathrm{A_R} = 1\)
 
 ---
 
@@ -127,7 +126,7 @@ If you use C2PO-Torus in your work, please cite:
 
 > **A New Hope for AGN SED Fitting: X-Ray Spectral Analysis of 12MGS AGN with the C2PO-Torus Model**
 > C.J.E. Gilbert et al. (2026)
-> *MNRAS*, in prep.
+> Submitted to *MNRAS*, under review.
 
 ---
 
