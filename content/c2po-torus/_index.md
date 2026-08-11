@@ -112,11 +112,7 @@ Uncertainties on the intrinsic luminosity are found using the relative uncertain
 
 ## Download
 
-The model files for use in XSPEC will be made available here upon publication of the paper.
-
-<!-- Update link when files are hosted:
-[Download C2PO-Torus model files](link-to-files)
--->
+[Download C2PO-Torus Version 1 model files](https://doi.org/10.5281/zenodo.21888565)
 
 ---
 
