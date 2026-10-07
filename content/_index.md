@@ -2,9 +2,9 @@
 title: "Home"
 ---
 
-I am a Master's student in Astrophysics at the **University of Cape Town**, specialising in **X-Ray Astronomy** and **Active Galactic Nuclei (AGN)**.
+I am a PhD student in Astrophysics at the **University of Manchester**, supervised by Prof. Chris Conselice. My PhD research focuses on tracing the **Epoch of Reionisation** using galaxies and intergalactic gas with **Euclid** and the **SKA**.
 
-My current research focuses on the multiwavelength analysis of local AGN from the 12-Micron Galaxy Sample (12MGS). I work with data from X-ray observatories such as **Chandra**, **XMM-Newton** and **NuSTAR**, as well as radio data from **MeerKAT**, to characterise the properties of AGN and their host galaxies.
+I completed my MSc in Astronomy at the **University of Cape Town**, specialising in **X-Ray Astronomy** and **Active Galactic Nuclei (AGN)**. My Master's research focused on the multiwavelength analysis of local AGN from the 12-Micron Galaxy Sample (12MGS), using data from X-ray observatories such as **Chandra**, **XMM-Newton** and **NuSTAR**, as well as radio data from **MeerKAT**, to characterise the properties of AGN and their host galaxies. As part of this work I developed the [C2PO-Torus](/c2po-torus/) X-ray spectral model.
 
 Outside of Astronomy you can generally find me hanging out with my two cats, <a href="#" id="frodo-link">Frodo</a> and <a href="#" id="turnip-link">Turnip</a>!
 

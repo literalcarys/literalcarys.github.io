@@ -8,3 +8,21 @@ body {
   margin-bottom: 1.5rem;
 }
 
+
+/* Black page behind the background image in dark mode */
+html.dark {
+  background-color: #000;
+}
+
+/* Background image (home layout and layouts/_default/baseof.html): fill the
+   whole viewport instead of a fixed 1000px band, and fade smoothly into the
+   page colour at every edge so large screens have no visible seam */
+.fixed.-z-10:has(> img.nozoom) {
+  height: 100vh;
+  -webkit-mask-image: radial-gradient(closest-side, #000 78%, transparent 100%);
+  mask-image: radial-gradient(closest-side, #000 78%, transparent 100%);
+}
+
+.fixed.-z-10:has(> img.nozoom) > * {
+  height: 100%;
+}
