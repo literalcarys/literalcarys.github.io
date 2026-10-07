@@ -38,14 +38,14 @@ The dust and gas are first distributed according to the density law
 
 \[\rho(r, i) \propto r^{-p} \, e^{-q|\cos i|}\]
 
-and the clumps are then generated randomly within the torus, each with a cubic spline density profile. The total amount of obscuring matter is set by the equatorial column density, \(N_{\mathrm{H,eq}}\).
+and the clumps are then generated randomly within the torus, each with a cubic spline density profile. The total amount of obscuring matter is set by the equatorial column density, \(\mathrm{N_{H,eq}}\).
 
 <figure style="margin: 1.5rem 0; text-align: center;">
   <div style="display: flex; gap: 1rem; justify-content: center;">
     <img src="img/density_xy.png" alt="Density map of the xy plane slice" style="max-width: 45%;" />
     <img src="img/density_xz.png" alt="Density map of the xz plane slice" style="max-width: 45%;" />
   </div>
-  <figcaption style="margin-top: 0.5rem; font-size: 0.9em; opacity: 0.8;">Density maps of the xy plane (left) and xz plane (right) slices for a torus with \(\Theta = 60°\), \(p = 1\), \(q = 1\) and \(N_{\mathrm{H,eq}} = 5 \times 10^{23}\ \mathrm{cm}^{-2}\). Higher density clumps are shown in yellow, while lower density interclump regions are plotted in purple. The reshaping of the inner wall by the anisotropic emission is visible in the xz slice.</figcaption>
+  <figcaption style="margin-top: 0.5rem; font-size: 0.9em; opacity: 0.8;">Density maps of the xy plane (left) and xz plane (right) slices for a torus with \(\Theta = 60°\), \(p = 1\), \(q = 1\) and \(\mathrm{N_{H,eq}} = 5 \times 10^{23}\ \mathrm{cm}^{-2}\). Higher density clumps are shown in yellow, while lower density interclump regions are plotted in purple. The reshaping of the inner wall by the anisotropic emission is visible in the xz slice.</figcaption>
 </figure>
 
 Each model was computed on a spherical grid with 150 bins along each axis. Because every simulation generates a new random clump distribution, each spectrum is averaged over four azimuthal viewing angles (\(\varphi = 0°, 90°, 180°, 270°\)). This avoids any single line of sight being unusually over- or under-obscured, and removes discontinuities between neighbouring models.
@@ -70,10 +70,10 @@ The model consists of two additive XSPEC table model components that must be **l
 |---|---|---|---|---|
 | Half-opening angle | \(\Theta\) | 10 -- 80 | 10 | degrees |
 | Inclination | \(i\) | 0 -- 90 | 10 | degrees |
-| Equatorial column density | \(N_{\mathrm{H,eq}}\) | \(10^{21}\) -- \(5 \times 10^{25}\) | 0.1 dex | \(\mathrm{cm}^{-2}\) |
+| Equatorial column density | \(\mathrm{N_{H,eq}}\) | \(10^{21}\) -- \(5 \times 10^{25}\) | 0.1 dex | \(\mathrm{cm}^{-2}\) |
 | Photon index | \(\Gamma\) | 1.4 -- 2.6 | 0.1 | |
 | Radial dust gradient | \(p\) | 0, 1 | | |
-| Reprocessed scaling | \(A_R\) | free | | |
+| Reprocessed scaling | \(\mathrm{A_R}\) | free | | |
 
 The inclination convention is \(i = 0°\) for face-on (Seyfert 1) and \(i = 90°\) for edge-on (Seyfert 2). Only two values of \(p\) are included, as it produces small spectral differences that cannot be distinguished at the resolution of most current X-ray data.
 
@@ -95,11 +95,11 @@ The inclination convention is \(i = 0°\) for face-on (Seyfert 1) and \(i = 90°
 
 ### Equatorial vs. Line-of-Sight Column Density
 
-\(N_{\mathrm{H,eq}}\) is the fitted quantity: the average equatorial column density of the smooth model before the clumps are generated. An approximate line-of-sight column density can be estimated from it as:
+\(\mathrm{N_{H,eq}}\) is the fitted quantity: the average equatorial column density of the smooth model before the clumps are generated. An approximate line-of-sight column density can be estimated from it as:
 
-\[N_{\mathrm{H,los}} = N_{\mathrm{H,eq}} \times e^{-|\cos i|}\]
+\[\mathrm{N_{H,los}} = \mathrm{N_{H,eq}} \times e^{-|\cos i|}\]
 
-This conversion assumes a smooth, clump-free torus and plays no part in generating or fitting the models. Because the line of sight may pass through more clumps than expected, or "peek through" a gap between them, \(N_{\mathrm{H,los}}\) values should be treated as **indicative estimates** only.
+This conversion assumes a smooth, clump-free torus and plays no part in generating or fitting the models. Because the line of sight may pass through more clumps than expected, or "peek through" a gap between them, \(\mathrm{N_{H,los}}\) values should be treated as **indicative estimates** only.
 
 ---
 
@@ -111,7 +111,7 @@ This conversion assumes a smooth, clump-free torus and plays no part in generati
 const * phabs * (A_R * C2POTorusR + C2POTorusD)
 ```
 
-Where `phabs` models Galactic absorption and all parameters of `C2POTorusD` and `C2POTorusR` should be **linked**. The scaling constant \(A_R\) can be fixed at 1 or left free.
+Where `phabs` models Galactic absorption and all parameters of `C2POTorusD` and `C2POTorusR` should be **linked**. The scaling constant \(\mathrm{A_R}\) can be fixed at 1 or left free.
 
 Additional components can be added as needed, e.g. `mekal` for soft excess:
 
@@ -128,7 +128,7 @@ const * phabs * (mekal + A_R * C2POTorusR + C2POTorusD + zphabs * cabs * relxill
 ```
 
 - Use `relxill` in reflection-only mode (reflection fraction \(\leq 0\)), with its photon index and normalisation **linked** to those of C2PO-Torus
-- Obscure the `relxill` component with `zphabs` (plus `cabs` for significantly obscured sources), linking their \(N_{\mathrm{H}}\) to the C2PO-Torus \(N_{\mathrm{H,eq}}\) via the line-of-sight relation above
+- Obscure the `relxill` component with `zphabs` (plus `cabs` for significantly obscured sources), linking their \(\mathrm{N_H}\) to the C2PO-Torus \(\mathrm{N_{H,eq}}\) via the line-of-sight relation above
 - The torus and accretion disc may not lie in the same plane, so the `relxill` inclination does not need to be tied to the torus inclination
 
 This is the configuration used to fit ESO 141-G055, shown below.
@@ -140,7 +140,7 @@ This is the configuration used to fit ESO 141-G055, shown below.
 Because `C2POTorusD` represents the *absorbed* emission, `clumin` would return the absorbed rather than the intrinsic luminosity. To calculate the intrinsic \(2-10\) keV luminosity:
 1. Freeze all parameters at their best-fit values
 2. Delete all model components except `C2POTorusD`
-3. Set \(N_{\mathrm{H,eq}} = 0.1\) (the lowest value, at which obscuration is negligible)
+3. Set \(\mathrm{N_{H,eq}} = 0.1\) (the lowest value, at which obscuration is negligible)
 4. Use the `lum` command
 
 Uncertainties on the intrinsic luminosity are found using the relative uncertainties of the normalisation.
@@ -148,6 +148,7 @@ Uncertainties on the intrinsic luminosity are found using the relative uncertain
 ### Tips
 
 - The model does not include soft excess or relativistic reflection, so add components such as `mekal` and `relxill` where these features are present, as with other physically-based torus models
+- For spectra with low SNR, start by freezing \(\Theta = 60^{\circ}\), \(i = 30^{\circ}\), and \(\mathrm{A_R} = 1\)
 
 ---
 
@@ -155,7 +156,7 @@ Uncertainties on the intrinsic luminosity are found using the relative uncertain
 
 The C2PO-Torus table model files for use in XSPEC are available to download from Zenodo:
 
-**[Download C2PO-Torus model files (Zenodo)](https://zenodo.org/records/21888565)**\
+**[Download C2PO-Torus Version 1 model files (Zenodo)](https://zenodo.org/records/21888565)**\
 DOI: [10.5281/zenodo.21888565](https://doi.org/10.5281/zenodo.21888565)
 
 ---
